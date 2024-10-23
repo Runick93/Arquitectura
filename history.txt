@@ -1,0 +1,9 @@
+76  lsblk
+77  sudo pvcreate /dev/sdb /dev/sdc /dev/sdd
+78  sudo vgcreate datos /dev/sdb /dev/sdc /dev/sdd
+79  sudo lvcreate -n www -L 1G datos
+80  sudo lvcreate -n salvas -L 4G datos
+81  sudo vgdisplay datos
+82  sudo lvextend -L 2G /dev/datos/www
+83  sudo lvdisplay
+84  history
